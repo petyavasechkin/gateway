@@ -1,0 +1,18 @@
+zuul:
+  routes:
+    banks:
+      serviceId: banks
+      path: /banks
+      stripPrefix: true
+    users:
+      serviceId: users
+      path: /users
+      stripPrefix: true
+
+banks:
+  ribbon:
+    listOfServers: localhost:10080
+
+users:
+  ribbon:
+    listOfServers: localhost:7080
